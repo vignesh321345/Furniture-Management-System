@@ -1,0 +1,116 @@
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.admin-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-tabs {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-tab-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-tab-btn:hover {
+  background-color: #ddd;
+}
+
+.admin-main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.admin-section-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.admin-table thead {
+  background-color: #eaeaea;
+}
+
+.admin-actions button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-actions .danger {
+  background-color: #e74c3c;
+}
+
+.admin-actions button:hover {
+  opacity: 0.85;
+}
+
+.admin-approval-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-approval-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-approval-item button {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-approval-item button:hover {
+  opacity: 0.9;
+}

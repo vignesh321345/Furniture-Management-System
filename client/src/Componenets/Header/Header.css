@@ -1,0 +1,60 @@
+.buttonWrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.buttons {
+  width:75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+  position: relative;
+}
+
+.buttons button {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttons button:hover {
+  background-color: #357ABD;
+  transform: scale(1.05);
+}
+
+
+.buttons button::after {
+  content: attr(data-desc);
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: #333;
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 5;
+ 
+}
+
+.buttons button:hover::after {
+  opacity: 1;
+}

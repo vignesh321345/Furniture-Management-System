@@ -1,0 +1,19 @@
+.sell-section {
+  padding: 20px;
+}
+
+.sell-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sell-section th,
+.sell-section td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.sell-section th {
+  background-color: #0a9396;
+  color: white;
+}

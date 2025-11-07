@@ -1,0 +1,64 @@
+/* Customer.module.css */
+.customerContainer {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.btnsCustomer {
+  margin-bottom: 20px;
+}
+
+.btnsCustomer button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnsCustomer button:hover {
+  background-color: #45a049;
+}
+
+.userDetails {
+  flex-grow: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.profileContainer {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileDetails div {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.userName, .userMobile, .userEmail {
+  color: #555;
+}
