@@ -24,9 +24,8 @@ if (!fs.existsSync(uploadDir)) {
 app.use(express.static('uploads'));
 
 app.use(cors({
-    origin: 'http://localhost:3000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH'],
-    credentials: true
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 
 app.post("/api/upload", upload.single("image"), async (req, res) => {
