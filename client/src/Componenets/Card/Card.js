@@ -59,7 +59,7 @@ function Card({ name, search }) {
               key={product._id}
               product={{
                 ...product,
-                imageUrl: ` https://furniture-management-system-3.onrender.com/${product.path}`,
+                imageUrl: ` https://furniture-management-system-3.onrender.com/${product.image}`,
               }}
             />
           ))}
