@@ -16,7 +16,7 @@ function Card({ name, search }) {
         const data = await res.json();
       
         if (Array.isArray(data.products)) {
-          console.log(data.products);
+          console.log(data.products[0].image);
           setProducts(data.products);
         }
       } catch (error) {
@@ -59,7 +59,7 @@ function Card({ name, search }) {
               key={product._id}
               product={{
                 ...product,
-                imageUrl: ` https://furniture-management-system-3.onrender.com/${product.image}`,
+                imageUrl: `${product.image}`,
               }}
             />
           ))}
