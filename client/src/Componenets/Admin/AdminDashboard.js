@@ -23,7 +23,7 @@ export default function AdminDashboard() {
 
   const fetchSales = async () => {
   try {
-    const res = await axios.get(" https://furniture-management-system-1.onrender.com/api/admin/sale", { headers });
+    const res = await axios.get(" https://furniture-management-system-3.onrender.com/api/admin/sale", { headers });
     setSales(res.data);
   } catch (err) {
     console.error("Failed to fetch sales:", err);
@@ -32,7 +32,7 @@ export default function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get(" https://furniture-management-system-1.onrender.com/api/admin/users", { headers });
+      const res = await axios.get(" https://furniture-management-system-3.onrender.com/api/admin/users", { headers });
       setUsers(res.data);
     } catch (err) {
       console.error("Failed to fetch users:", err);
@@ -41,7 +41,7 @@ export default function AdminDashboard() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(" https://furniture-management-system-1.onrender.com/api/admin/products", { headers });
+      const res = await axios.get(" https://furniture-management-system-3.onrender.com/api/admin/products", { headers });
       setProducts(res.data);
     } catch (err) {
       console.error("Failed to fetch products:", err);
@@ -50,7 +50,7 @@ export default function AdminDashboard() {
 
   const fetchPendingAdmins = async () => {
     try {
-      const res = await axios.get(" https://furniture-management-system-1.onrender.com/api/admin/admin-requests", { headers });
+      const res = await axios.get(" https://furniture-management-system-3.onrender.com/api/admin/admin-requests", { headers });
       setPendingAdmins(res.data.users);
     } catch (err) {
       console.error("Failed to fetch pending admins:", err);
@@ -60,7 +60,7 @@ export default function AdminDashboard() {
   const updateRole = async (id, role) => {
     console.log(role);
     try {
-      await axios.put(` https://furniture-management-system-1.onrender.com/api/admin/user/${id}/role`, { role }, { headers });
+      await axios.put(` https://furniture-management-system-3.onrender.com/api/admin/user/${id}/role`, { role }, { headers });
       fetchUsers();
       fetchPendingAdmins();
     } catch (err) {
@@ -71,7 +71,7 @@ export default function AdminDashboard() {
   const deleteUser = async (id) => {
     if (!window.confirm("Delete this user?")) return;
     try {
-      await axios.delete(` https://furniture-management-system-1.onrender.com/api/admin/user/${id}`, { headers });
+      await axios.delete(` https://furniture-management-system-3.onrender.com/api/admin/user/${id}`, { headers });
       fetchUsers();
     } catch (err) {
       console.error("User delete failed:", err);
@@ -81,7 +81,7 @@ export default function AdminDashboard() {
   const deleteProduct = async (id) => {
     if (!window.confirm("Delete this product?")) return;
     try {
-      await axios.delete(` https://furniture-management-system-1.onrender.com/api/admin/product/${id}`, { headers });
+      await axios.delete(` https://furniture-management-system-3.onrender.com/api/admin/product/${id}`, { headers });
       fetchProducts();
     } catch (err) {
       console.error("Product delete failed:", err);

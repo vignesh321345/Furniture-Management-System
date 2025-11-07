@@ -9,7 +9,7 @@ function Sell() {
   useEffect(() => {
     const fetchSales = async () => {
       try {
-        const res = await fetch(" https://furniture-management-system-1.onrender.com/api/payment/my-sales", {
+        const res = await fetch(" https://furniture-management-system-3.onrender.com/api/payment/my-sales", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

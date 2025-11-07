@@ -39,7 +39,7 @@ function Cart() {
   }
 
   try {
-    const res = await fetch(" https://furniture-management-system-1.onrender.com/api/payment/order", {
+    const res = await fetch(" https://furniture-management-system-3.onrender.com/api/payment/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +74,7 @@ function Cart() {
         alert("✅ Payment Successful");
 
         try {
-          await fetch(" https://furniture-management-system-1.onrender.com/api/payment/verify", {
+          await fetch(" https://furniture-management-system-3.onrender.com/api/payment/verify", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -130,7 +130,7 @@ function Cart() {
       {cart.length > 0 ? (
         cart.map((prod) => (
           <div key={prod._id} className="products_container">
-            <img src={` https://furniture-management-system-1.onrender.com/${prod.filename}`} alt={prod.name} />
+            <img src={` https://furniture-management-system-3.onrender.com/${prod.filename}`} alt={prod.name} />
             <div className="products_description">
               <p>{prod.name}</p>
               <p>₹{prod.price}</p>

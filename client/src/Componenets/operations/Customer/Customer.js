@@ -24,7 +24,7 @@ function Customer() {
         return;
     }
     try {
-        const response = await fetch(` https://furniture-management-system-1.onrender.com/api/user/${profileId}`, {
+        const response = await fetch(` https://furniture-management-system-3.onrender.com/api/user/${profileId}`, {
             headers: {
                 "Authorization": `Bearer ${token}`,
             },

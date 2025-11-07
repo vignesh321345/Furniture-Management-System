@@ -24,7 +24,7 @@ export function ProductProvider({ children }) {
     if (!token) return;
 
     try {
-      const response = await fetch(" https://furniture-management-system-1.onrender.com/api/favourites", {
+      const response = await fetch(" https://furniture-management-system-3.onrender.com/api/favourites", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ export function ProductProvider({ children }) {
     if (!product || !product.title || !token) return "Error occurred";
 
     try {
-      const response = await fetch(" https://furniture-management-system-1.onrender.com/api/favourites", {
+      const response = await fetch(" https://furniture-management-system-3.onrender.com/api/favourites", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +72,7 @@ export function ProductProvider({ children }) {
 
     try {
       const response = await fetch(
-        ` https://furniture-management-system-1.onrender.com/api/favourites/${product.title}`,
+        ` https://furniture-management-system-3.onrender.com/api/favourites/${product.title}`,
         {
           method: "DELETE",
           headers: {
@@ -105,7 +105,7 @@ export function ProductProvider({ children }) {
 
   const fetchCart = async () => {
     try {
-      const response = await fetch(" https://furniture-management-system-1.onrender.com/api/cart", {
+      const response = await fetch(" https://furniture-management-system-3.onrender.com/api/cart", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -127,7 +127,7 @@ export function ProductProvider({ children }) {
     if (!product || !product._id || !token) return;
 
     try {
-      const response = await fetch(" https://furniture-management-system-1.onrender.com/api/cart", {
+      const response = await fetch(" https://furniture-management-system-3.onrender.com/api/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -162,7 +162,7 @@ const remove_cart = async (product) => {
   const productId = product.productId._id;
 
   try {
-    const response = await fetch(` https://furniture-management-system-1.onrender.com/api/cart/${productId}`, {
+    const response = await fetch(` https://furniture-management-system-3.onrender.com/api/cart/${productId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -188,7 +188,7 @@ const increase_quantity = async (product) => {
   if (!productId || !token) return;
 
   try {
-    const res = await fetch(` https://furniture-management-system-1.onrender.com/api/cart/increase/${productId}`, {
+    const res = await fetch(` https://furniture-management-system-3.onrender.com/api/cart/increase/${productId}`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -211,7 +211,7 @@ const decrease_quantity = async (product) => {
   if (!productId || !token) return;
 
   try {
-    const res = await fetch(` https://furniture-management-system-1.onrender.com/api/cart/decrease/${productId}`, {
+    const res = await fetch(` https://furniture-management-system-3.onrender.com/api/cart/decrease/${productId}`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -232,7 +232,7 @@ const clear_cart = async () => {
   if (!token) return;
 
   try {
-    const res = await fetch(" https://furniture-management-system-1.onrender.com/api/cart", {
+    const res = await fetch(" https://furniture-management-system-3.onrender.com/api/cart", {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

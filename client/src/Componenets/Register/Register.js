@@ -22,7 +22,7 @@ function Register() {
   const handleSignup = async () => {
     setLoading(true);
     try {
-      await axios.post(" https://furniture-management-system-1.onrender.com/api/user/register", {
+      await axios.post(" https://furniture-management-system-3.onrender.com/api/user/register", {
         name,
         email,
         password,
