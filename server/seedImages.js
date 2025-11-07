@@ -2,12 +2,14 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const fs = require("fs");
 const path = require("path");
-const Product = require("./model/productModel"); // Make sure this model exists
+const Product = require("./model/imagemodel");
 dotenv.config();
+
+// ✅ Change this to your deployed base URL
+const BASE_URL = process.env.BASE_URL || "http://localhost:4500";
 
 const uploadFolder = path.join(__dirname, "uploads");
 
-// Image metadata
 const metadata = {
   "one.jpg":    { title: "Modern Fabric Sofa", tags: "sofas", price: 21999 },
   "two.jpg":    { title: "Scandinavian Coffee Table", tags: "living", price: 6499 },
@@ -19,11 +21,12 @@ const metadata = {
   "eight.jpg":  { title: "Ergonomic Office Chair", tags: "sofas", price: 5499 }
 };
 
-// Seed function
 const seedImages = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ Connected to MongoDB");
+console.log("✅ Connected to MongoDB:", mongoose.connection.name);
+console.log("🗄 Using database:", mongoose.connection.db.databaseName);
+
 
     const files = fs.readdirSync(uploadFolder);
 
@@ -34,7 +37,8 @@ const seedImages = async () => {
         continue;
       }
 
-      const exists = await Product.findOne({ image: `uploads/${file}` });
+      const imageUrl = `${BASE_URL}/uploads/${file}`;
+      const exists = await Product.findOne({ image: imageUrl });
       if (exists) {
         console.log(`🔁 Skipping existing product: ${file}`);
         continue;
@@ -44,8 +48,8 @@ const seedImages = async () => {
         title: meta.title,
         tags: meta.tags,
         price: meta.price,
-        image: `uploads/${file}`,
-        stock: 10, // default stock
+        image: imageUrl, // ✅ store URL instead of local path
+        stock: 10,
         isSold: false
       });
 
