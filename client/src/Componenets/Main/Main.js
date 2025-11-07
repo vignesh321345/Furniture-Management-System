@@ -38,7 +38,7 @@ const handleCart =  async (product) => {
         {message ? globalmessage : ""}
       </div>
 
-      <img src={`http://localhost:4500/${product.filename}`} alt={product.title} />
+      <img src={` https://furniture-management-system-1.onrender.com/${product.filename}`} alt={product.title} />
 
       <button className="cart" onClick={()=>handleCart(product)}>
         <MdOutlineShoppingCartCheckout />

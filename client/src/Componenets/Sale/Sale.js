@@ -16,7 +16,7 @@ function Sale({ user }) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch("http://localhost:4500/api/products");
+                const response = await fetch(" https://furniture-management-system-1.onrender.com/api/products");
                 const data = await response.json();
                 if (response.ok) setProducts(data.products);
                 else setError(data.message);
@@ -36,7 +36,7 @@ function Sale({ user }) {
         if (file) formData.append("image", file);
 
         try {
-            const response = await fetch("http://localhost:4500/api/upload", {
+            const response = await fetch(" https://furniture-management-system-1.onrender.com/api/upload", {
                 method: "POST",
                 body: formData,
                 headers: {
@@ -93,7 +93,7 @@ function Sale({ user }) {
                 {products.length > 0 ? products.map((product) => (
                     <Main key={product._id} product={{
                         ...product,
-                        imageUrl: `http://localhost:4500/${product.filename}`
+                        imageUrl: ` https://furniture-management-system-1.onrender.com/${product.filename}`
                     }} />
                 )) : <p>No products for sale yet.</p>}
             </div>

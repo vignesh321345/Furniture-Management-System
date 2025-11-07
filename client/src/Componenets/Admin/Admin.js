@@ -13,7 +13,7 @@ export default function Admin() {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://localhost:4500/api/admin/users", {
+      const res = await fetch("https://furniture-management-system-1.onrender.com/api/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();

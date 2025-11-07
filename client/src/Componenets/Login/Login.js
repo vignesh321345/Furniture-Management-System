@@ -19,7 +19,7 @@ function Login() {
 const handleLogin = async () => {
   setLoading(true);
   try {
-    const res = await axios.post("http://localhost:4500/api/user/login", {
+    const res = await axios.post(" https://furniture-management-system-1.onrender.com/api/user/login", {
       email,
       password,
     });
