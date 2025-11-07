@@ -37,7 +37,7 @@ app.post("/api/upload", upload.single("image"), async (req, res) => {
         const { path, filename } = req.file;
 
         // Save file path as relative to /uploads
-        const image = new Image({ title, tags, price, path, filename });
+      const image = new Image({ title, tags, price, image: imageUrl });
         await image.save();
         res.json({ message: "Product uploaded successfully", image });
     } catch (error) {
