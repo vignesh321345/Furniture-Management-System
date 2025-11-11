@@ -71,8 +71,7 @@ export function ProductProvider({ children }) {
     if (!product || !product.title || !token) return;
 
     try {
-      const response = await fetch(
-        ` https://furniture-management-system-3.onrender.com/api/favourites/${product.title}`,
+      const response = await fetch(`${product.title}`,
         {
           method: "DELETE",
           headers: {
@@ -137,7 +136,7 @@ export function ProductProvider({ children }) {
           productId: product._id,
           name: product.title,
          price: Number(product.price.replace(/[^0-9.-]+/g, "")),
-          filename: product.filename,
+          filename: product.image,
           quantity: 1,
         }),
       });
