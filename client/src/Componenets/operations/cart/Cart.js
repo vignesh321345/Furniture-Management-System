@@ -130,7 +130,7 @@ function Cart() {
       {cart.length > 0 ? (
         cart.map((prod) => (
           <div key={prod._id} className="products_container">
-            <img src={`${prod.image}`} alt={prod.title} />
+            <img src={` https://furniture-management-system-3.onrender.com/${prod.filename}`} alt={prod.name} />
             <div className="products_description">
               <p>{prod.name}</p>
               <p>₹{prod.price}</p>
