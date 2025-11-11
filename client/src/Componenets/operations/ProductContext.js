@@ -51,7 +51,7 @@ export function ProductProvider({ children }) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ title: product.title }),
+        body: JSON.stringify({ title: product.title,image:product.image }),
       });
 
       const data = await response.json();
@@ -137,7 +137,7 @@ export function ProductProvider({ children }) {
           productId: product._id,
           name: product.title,
          price: Number(product.price.replace(/[^0-9.-]+/g, "")),
-          filename: product.image,
+          image: product.image,
           quantity: 1,
         }),
       });
