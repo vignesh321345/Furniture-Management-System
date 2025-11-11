@@ -130,7 +130,7 @@ function Cart() {
       {cart.length > 0 ? (
         cart.map((prod) => (
           <div key={prod._id} className="products_container">
-            <img src={`${prod.image}`} alt={prod.name} />
+            <img src={`${prod.image}`} alt={prod.title} />
             <div className="products_description">
               <p>{prod.name}</p>
               <p>₹{prod.price}</p>

@@ -16,7 +16,7 @@ function Fav() {
       {fav.length > 0 ? fav.map((item) => (
         <div key={item._id || item.name} className="fav_item">
           <div className="fav_container">
-            <img src={` https://furniture-management-system-3.onrender.com/${item.filename}`} alt={item.name} />
+            <img src={` ${item.image}`} alt={item.title} />
             <div className="item_des">
               <p className="item_title">{item.name}</p>
               <p className="item_price">{item.price}</p>
