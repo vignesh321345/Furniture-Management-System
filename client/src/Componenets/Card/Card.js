@@ -12,7 +12,7 @@ function Card({ name, search }) {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch("https://furniture-management-system-3.onrender.com/api/imgs"); 
+        const res = await fetch(" https://furniture-management-system-3.onrender.com/api/imgs"); 
         const data = await res.json();
       
         if (Array.isArray(data.products)) {
