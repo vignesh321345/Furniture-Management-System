@@ -137,7 +137,7 @@ export function ProductProvider({ children }) {
           productId: product._id,
           name: product.title,
          price: Number(product.price.replace(/[^0-9.-]+/g, "")),
-          filename: product.filename,
+          filename: product.image,
           quantity: 1,
         }),
       });
